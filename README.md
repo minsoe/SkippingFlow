@@ -8,7 +8,7 @@ To include this library in your skip project, add the following dependency to yo
 
 ```
     dependencies: [
-        .package(url: "https://github.com/minsoe/SkippingFlow.git", from: "main"),
+        .package(url: "https://github.com/minsoe/SkippingFlow.git", branch: "main"),
     ]
 ```
 
