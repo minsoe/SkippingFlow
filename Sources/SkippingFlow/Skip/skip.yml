@@ -1,0 +1,9 @@
+# Configuration file for https://skip.tools project
+
+# the blocks to add to the build.gradle.kts
+build:
+  contents:
+    - block: 'dependencies'
+      export: false
+      contents:
+        - 'implementation("com.google.accompanist:accompanist-flowlayout:0.36.0")'

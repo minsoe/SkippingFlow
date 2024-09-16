@@ -5,19 +5,36 @@ import PackageDescription
 
 let package = Package(
     name: "SkippingFlow",
+    platforms: [.iOS(.v16), .macOS(.v13), .tvOS(.v16), .watchOS(.v9), .macCatalyst(.v16)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "SkippingFlow",
-            targets: ["SkippingFlow"]),
+            type: .dynamic,
+            targets: ["SkippingFlow"]
+        ),
+    ],
+    dependencies: [
+        .package(url: "https://github.com/tevelee/SwiftUI-Flow.git", from: "2.5.0"),
+        .package(url: "https://source.skip.tools/skip.git", from: "1.0.11"),
+        .package(url: "https://source.skip.tools/skip-ui.git", from: "1.8.0"),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "SkippingFlow"),
+            name: "SkippingFlow",
+            dependencies: [
+                .product(name: "Flow", package: "swiftui-flow"),
+                .product(name: "SkipUI", package: "skip-ui"),
+            ],
+            plugins: [.plugin(name: "skipstone", package: "skip")]
+        ),
         .testTarget(
             name: "SkippingFlowTests",
-            dependencies: ["SkippingFlow"]),
+            dependencies: [
+                "SkippingFlow",
+                .product(name: "SkipTest", package: "skip")
+            ],
+            plugins: [.plugin(name: "skipstone", package: "skip")]
+        ),
     ]
 )
