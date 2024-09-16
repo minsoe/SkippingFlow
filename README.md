@@ -14,7 +14,7 @@ To include this library in your skip project, add the following dependency to yo
 
 ## Usage
 
-### SkippingHFlow
+### SkippingHFlow (H)
 ```swift
 import SkippingFlow
 ...
@@ -26,7 +26,7 @@ SkippingHFlow {
 }
 ```
 
-### SkippingHFlow
+### SkippingVFlow (V)
 ```swift
 import SkippingFlow
 ...
