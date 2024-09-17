@@ -1,6 +1,6 @@
 # SkippingFlow
 
-SkippingFlow - a flow layout wrapper library for [skip.tool](https://skip.tools/) projects by utilizing [SwiftUI-Flow](https://github.com/tevelee/SwiftUI-Flow) for iOS and [Google's accompanist-flowlayout](https://github.com/google/accompanist) for Android.
+SkippingFlow - a flow layout wrapper library for [skip.tool](https://skip.tools/) projects using [SwiftUI-Flow](https://github.com/tevelee/SwiftUI-Flow) for iOS and [Google's accompanist-flowlayout](https://github.com/google/accompanist) for Android.
 
 
 ## Installation
@@ -14,7 +14,7 @@ To include this library in your skip project, add the following dependency to yo
 
 ## Usage
 
-### SkippingHFlow (H)
+### SkippingHFlow (Horizontal)
 ```swift
 import SkippingFlow
 ...
@@ -26,7 +26,7 @@ SkippingHFlow {
 }
 ```
 
-### SkippingVFlow (V)
+### SkippingVFlow (Vertical)
 ```swift
 import SkippingFlow
 ...
